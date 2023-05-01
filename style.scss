@@ -1,0 +1,155 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+
+nav {
+    position: relative;
+    padding-bottom: 150px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #a1a0a0;
+}
+  
+nav li {
+    float: left;
+}
+  
+nav li a {
+    display: block;
+    padding: 0 10px;
+    line-height: 40px;
+    color: black;
+    text-decoration: none;
+}
+  
+nav li:hover {
+    background: #dadada;
+}
+  
+nav ul ul {
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+  
+nav ul li:hover > ul {
+    display: inherit;
+}
+  
+nav ul ul li {
+    width: 200px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+  
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    left: 200px;
+}
+
+.grid {
+    padding-top: 50px;
+    display: grid;
+    place-items: stretch;
+    width: 100%;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+  
+.grid img {
+    filter: grayscale(0.9) opacity(0.9);
+    border: 2px solid transparent;
+    transition: all 0.15s ease-in-out;
+}
+  
+.grid img:hover,
+.grid img:focus {
+    filter: grayscale(0);
+    opacity: 1;
+    border: 2px solid #000;
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgba(0 0 0 / 80%);
+    display: none;
+}
+  
+.lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.lightbox__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.8rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+  
+.lightbox img {
+    height: 640px;
+    width: 500px;
+    max-height: 100%;
+    max-width: 100%;
+}
+  
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.container {
+    margin: 50px 0;
+    padding: 0;
+    width: 1200px;
+}
+
+.row {
+    display:flexbox;
+    background-color: rgb(173, 173, 173);
+    margin: 0;
+}
+
+#id-footer {
+    background-color: white;
+}
+
+figure img {
+    width: 100%;
+}
+
+#col2 {
+    display: flex;
+    align-items: center;
+}
